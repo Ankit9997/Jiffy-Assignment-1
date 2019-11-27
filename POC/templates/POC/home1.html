@@ -1,0 +1,14 @@
+{% extends 'POC/base.html'%}
+
+{%block content%}
+
+
+<form action="{% url 'search_results' %}" method="get">
+  <input name="q" type="text" placeholder="Search...">
+  <button type="submit" name="button">Search</button>
+</form>
+
+
+
+
+{%endblock%}

@@ -1,0 +1,23 @@
+{% extends "POC/base.html" %}
+{% block content %}
+  <article class="media content-section">
+
+    <div class="media-body">
+      <div class="article-metadata">
+        Name:-<a class="mr-2" href="#">{{ object.name }}</a>
+        Age:-<small class="text-muted">{{ object.age }}</small>
+
+          <div>
+            <a class="btn btn-primary" href="{% url 'person_change' object.id %}">Update</a>
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'person_delete' object.id %}">Delete</a>
+          </div>
+
+      </div>
+      Country:-<h2 class="article-title">{{ object.country }}</h2>
+      City:-<p class="article-content">{{ object.city }}</p>
+      Zip:-<p class="article-content">{{ object.zip }}</p>
+      address:-<p class="article-content">{{ object.address }}</p>
+
+    </div>
+  </article>
+{% endblock content %}
